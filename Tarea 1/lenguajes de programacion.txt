@@ -1,0 +1,23 @@
+
+===================================================
+Lenguajes de Programación Imperativa y Declarativa
+===================================================
+
+En los lenguajes de programacion imperativa se describe paso a paso un conjunto de 
+instrucciones en un programa para llevar a cabo una accion, mientras que en los lenguajes
+de programación declarativa se usan sentencias declarativas para describir 
+un problema, se programa lo que se quiere resolver a nivel de usuario, pero no las 
+instrucciones necesarias, esto se realizará mediante mecanismos internos de inferencia de 
+información a partir de la descripción realizada.
+
+
+Ambas formas pueden construir interfaces exactamente iguales, pero la forma en cómo están construidas es diferente.
+
+Ejemplo:
+
+Un boton que despliega un menu drop-down se programa con numerosas instrucciones en jquery y javascipt
+para llevar a cabo esta accion. Si se usa react js se puede lograr el mismo resultado con unas pocas lineas de codigo
+que declaran lo que se quiere obtener.
+
+
+
