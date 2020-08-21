@@ -1,0 +1,26 @@
+<heroes-dc>
+    <heroe>
+        <nombre>Clark Kent</nombre>
+        <poder>Volar</poder>
+        <apodo>Superman</apodo>
+        <archinemesis>Lex Luthor</archinemesis>
+    </heroe>
+    <heroe>
+        <nombre>Bruce Wayne</nombre>
+        <poder>Artes Marciales</poder>
+        <apodo>Batman</apodo>
+        <archinemesis>Joker</archinemesis>
+    </heroe>
+    <heroe>
+        <nombre>Diana Prince</nombre>
+        <poder>Super fuerza</poder>
+        <apodo>Mujer Maravilla</apodo>
+        <archinemesis>Ares</archinemesis>
+    </heroe>
+    <heroe>
+        <nombre>Arthur Curry</nombre>
+        <poder>Hablar con peces</poder>
+        <apodo>Aquaman</apodo>
+        <archinemesis>Black Manta</archinemesis>
+    </heroe>
+</heroes-dc>

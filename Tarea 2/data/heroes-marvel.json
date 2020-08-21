@@ -1,0 +1,27 @@
+{
+    "heroes_marvel": [{
+            "nombre": "Tony Stark",
+            "poder": "Tecnologia",
+            "apodo": "Iron-man",
+            "debilidad": "Su padre"
+        },
+        {
+            "nombre": "Logan",
+            "poder": "Regeneracion",
+            "apodo": "Wolverine",
+            "debilidad": "Veneno"
+        },
+        {
+            "nombre": "Peter Parker",
+            "poder": "Sentido aracnido",
+            "apodo": "Spider-man",
+            "debilidad": "Tio Ben"
+        },
+        {
+            "nombre": "Bruce Banner",
+            "poder": "Super Fuerza",
+            "apodo": "The Hulk",
+            "debilidad": "Tonto"
+        }
+    ]
+}
