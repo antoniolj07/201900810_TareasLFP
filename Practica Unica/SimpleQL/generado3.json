@@ -1,0 +1,602 @@
+[
+  {
+    "nombre": "Wiggins Montoya",
+    "edad": 30,
+    "activo": false,
+    "promedio": 22.7596
+  },
+  {
+    "nombre": "Nicholson Harrison",
+    "edad": 35,
+    "activo": false,
+    "promedio": 30.0404
+  },
+  {
+    "nombre": "Christensen Delgado",
+    "edad": 23,
+    "activo": true,
+    "promedio": 35.6682
+  },
+  {
+    "nombre": "Alma Griffith",
+    "edad": 33,
+    "activo": true,
+    "promedio": 33.2021
+  },
+  {
+    "nombre": "Bessie Riley",
+    "edad": 39,
+    "activo": true,
+    "promedio": 24.3559
+  },
+  {
+    "nombre": "Concepcion Crane",
+    "edad": 22,
+    "activo": true,
+    "promedio": 31.0935
+  },
+  {
+    "nombre": "Sampson Pitts",
+    "edad": 33,
+    "activo": true,
+    "promedio": 25.9852
+  },
+  {
+    "nombre": "Pope Valenzuela",
+    "edad": 22,
+    "activo": false,
+    "promedio": 37.7021
+  },
+  {
+    "nombre": "Louise Holt",
+    "edad": 31,
+    "activo": false,
+    "promedio": 26.561
+  },
+  {
+    "nombre": "Ferguson Ortiz",
+    "edad": 39,
+    "activo": true,
+    "promedio": 35.6414
+  },
+  {
+    "nombre": "Janis Hooper",
+    "edad": 33,
+    "activo": false,
+    "promedio": 37.1231
+  },
+  {
+    "nombre": "Camacho Dyer",
+    "edad": 30,
+    "activo": false,
+    "promedio": 26.758
+  },
+  {
+    "nombre": "Michael Schroeder",
+    "edad": 36,
+    "activo": true,
+    "promedio": 30.5962
+  },
+  {
+    "nombre": "Stafford Mcknight",
+    "edad": 39,
+    "activo": true,
+    "promedio": 24.1938
+  },
+  {
+    "nombre": "Beryl Joyner",
+    "edad": 32,
+    "activo": true,
+    "promedio": 25.6033
+  },
+  {
+    "nombre": "Reyna Blankenship",
+    "edad": 25,
+    "activo": true,
+    "promedio": 27.6172
+  },
+  {
+    "nombre": "Lakisha Mercer",
+    "edad": 30,
+    "activo": true,
+    "promedio": 26.2235
+  },
+  {
+    "nombre": "Celia Wilkins",
+    "edad": 27,
+    "activo": false,
+    "promedio": 37.3736
+  },
+  {
+    "nombre": "Whitfield Valencia",
+    "edad": 32,
+    "activo": true,
+    "promedio": 31.7072
+  },
+  {
+    "nombre": "Laurie Greer",
+    "edad": 20,
+    "activo": true,
+    "promedio": 36.48
+  },
+  {
+    "nombre": "Rosa Chase",
+    "edad": 23,
+    "activo": true,
+    "promedio": 31.7747
+  },
+  {
+    "nombre": "Myra Wynn",
+    "edad": 21,
+    "activo": true,
+    "promedio": 37.8143
+  },
+  {
+    "nombre": "Bette Moss",
+    "edad": 35,
+    "activo": false,
+    "promedio": 37.4332
+  },
+  {
+    "nombre": "Zimmerman Burt",
+    "edad": 24,
+    "activo": false,
+    "promedio": 29.0111
+  },
+  {
+    "nombre": "Avery Howard",
+    "edad": 33,
+    "activo": true,
+    "promedio": 35.1487
+  },
+  {
+    "nombre": "Montgomery Gross",
+    "edad": 27,
+    "activo": false,
+    "promedio": 28.0534
+  },
+  {
+    "nombre": "Shelton Mills",
+    "edad": 21,
+    "activo": false,
+    "promedio": 29.2735
+  },
+  {
+    "nombre": "Hughes Kramer",
+    "edad": 26,
+    "activo": false,
+    "promedio": 37.8108
+  },
+  {
+    "nombre": "Leigh Kelly",
+    "edad": 25,
+    "activo": true,
+    "promedio": 21.6486
+  },
+  {
+    "nombre": "Rosella Joseph",
+    "edad": 23,
+    "activo": false,
+    "promedio": 38.7573
+  },
+  {
+    "nombre": "Schmidt Riggs",
+    "edad": 21,
+    "activo": false,
+    "promedio": 39.3177
+  },
+  {
+    "nombre": "Ratliff Potter",
+    "edad": 20,
+    "activo": true,
+    "promedio": 35.7721
+  },
+  {
+    "nombre": "Roach Reeves",
+    "edad": 27,
+    "activo": true,
+    "promedio": 30.0547
+  },
+  {
+    "nombre": "Alexander Harmon",
+    "edad": 40,
+    "activo": false,
+    "promedio": 31.3701
+  },
+  {
+    "nombre": "Hampton Whitehead",
+    "edad": 25,
+    "activo": true,
+    "promedio": 34.0377
+  },
+  {
+    "nombre": "Ware Patel",
+    "edad": 27,
+    "activo": true,
+    "promedio": 37.9921
+  },
+  {
+    "nombre": "Lamb Curtis",
+    "edad": 31,
+    "activo": false,
+    "promedio": 29.4744
+  },
+  {
+    "nombre": "Blake Hansen",
+    "edad": 35,
+    "activo": true,
+    "promedio": 30.7916
+  },
+  {
+    "nombre": "Krystal Combs",
+    "edad": 38,
+    "activo": false,
+    "promedio": 29.6744
+  },
+  {
+    "nombre": "Deirdre Casey",
+    "edad": 25,
+    "activo": true,
+    "promedio": 31.297
+  },
+  {
+    "nombre": "Humphrey Mcdaniel",
+    "edad": 34,
+    "activo": true,
+    "promedio": 29.454
+  },
+  {
+    "nombre": "Pittman Ware",
+    "edad": 27,
+    "activo": false,
+    "promedio": 32.2276
+  },
+  {
+    "nombre": "Lindsay Montgomery",
+    "edad": 37,
+    "activo": true,
+    "promedio": 35.4072
+  },
+  {
+    "nombre": "Bertie Hunt",
+    "edad": 31,
+    "activo": false,
+    "promedio": 30.3855
+  },
+  {
+    "nombre": "Blair Bradshaw",
+    "edad": 30,
+    "activo": false,
+    "promedio": 24.0414
+  },
+  {
+    "nombre": "Allyson Weber",
+    "edad": 24,
+    "activo": true,
+    "promedio": 24.5364
+  },
+  {
+    "nombre": "Gillespie Tyson",
+    "edad": 39,
+    "activo": true,
+    "promedio": 23.6824
+  },
+  {
+    "nombre": "Sheryl Livingston",
+    "edad": 33,
+    "activo": true,
+    "promedio": 27.9134
+  },
+  {
+    "nombre": "Morris Shields",
+    "edad": 24,
+    "activo": false,
+    "promedio": 28.795
+  },
+  {
+    "nombre": "Felicia Morse",
+    "edad": 40,
+    "activo": true,
+    "promedio": 34.2033
+  },
+  {
+    "nombre": "Wilcox Pearson",
+    "edad": 40,
+    "activo": false,
+    "promedio": 23.304
+  },
+  {
+    "nombre": "Lila Wilkinson",
+    "edad": 23,
+    "activo": false,
+    "promedio": 27.7688
+  },
+  {
+    "nombre": "Sharlene Garner",
+    "edad": 26,
+    "activo": true,
+    "promedio": 24.182
+  },
+  {
+    "nombre": "Gaines Estrada",
+    "edad": 26,
+    "activo": false,
+    "promedio": 37.0905
+  },
+  {
+    "nombre": "Carolina Barton",
+    "edad": 33,
+    "activo": false,
+    "promedio": 24.6464
+  },
+  {
+    "nombre": "Randall Nash",
+    "edad": 33,
+    "activo": false,
+    "promedio": 27.3055
+  },
+  {
+    "nombre": "Rosalinda Nelson",
+    "edad": 34,
+    "activo": true,
+    "promedio": 31.4224
+  },
+  {
+    "nombre": "Lydia Gould",
+    "edad": 22,
+    "activo": true,
+    "promedio": 29.8912
+  },
+  {
+    "nombre": "Elizabeth York",
+    "edad": 26,
+    "activo": true,
+    "promedio": 29.2759
+  },
+  {
+    "nombre": "Ola Berry",
+    "edad": 33,
+    "activo": true,
+    "promedio": 34.6764
+  },
+  {
+    "nombre": "Monica Pace",
+    "edad": 28,
+    "activo": false,
+    "promedio": 37.5736
+  },
+  {
+    "nombre": "Meghan Mcgowan",
+    "edad": 32,
+    "activo": false,
+    "promedio": 21.0356
+  },
+  {
+    "nombre": "Hattie Spencer",
+    "edad": 27,
+    "activo": true,
+    "promedio": 31.3882
+  },
+  {
+    "nombre": "Harrington Hinton",
+    "edad": 38,
+    "activo": false,
+    "promedio": 35.9854
+  },
+  {
+    "nombre": "Luisa Cook",
+    "edad": 25,
+    "activo": true,
+    "promedio": 20.7414
+  },
+  {
+    "nombre": "Anastasia Hutchinson",
+    "edad": 38,
+    "activo": true,
+    "promedio": 38.0203
+  },
+  {
+    "nombre": "Forbes Giles",
+    "edad": 20,
+    "activo": true,
+    "promedio": 24.6541
+  },
+  {
+    "nombre": "Finch Dawson",
+    "edad": 39,
+    "activo": true,
+    "promedio": 28.8743
+  },
+  {
+    "nombre": "Celina Shelton",
+    "edad": 20,
+    "activo": false,
+    "promedio": 20.879
+  },
+  {
+    "nombre": "Corina Shepard",
+    "edad": 33,
+    "activo": false,
+    "promedio": 38.6542
+  },
+  {
+    "nombre": "Katheryn Jackson",
+    "edad": 27,
+    "activo": false,
+    "promedio": 36.8679
+  },
+  {
+    "nombre": "Salas Meyers",
+    "edad": 29,
+    "activo": true,
+    "promedio": 29.3811
+  },
+  {
+    "nombre": "Puckett Rojas",
+    "edad": 38,
+    "activo": true,
+    "promedio": 36.1666
+  },
+  {
+    "nombre": "Baldwin Duke",
+    "edad": 34,
+    "activo": false,
+    "promedio": 33.5155
+  },
+  {
+    "nombre": "Cortez Cleveland",
+    "edad": 39,
+    "activo": true,
+    "promedio": 20.4746
+  },
+  {
+    "nombre": "Ann Nicholson",
+    "edad": 33,
+    "activo": false,
+    "promedio": 39.3336
+  },
+  {
+    "nombre": "Conway Wong",
+    "edad": 40,
+    "activo": true,
+    "promedio": 33.545
+  },
+  {
+    "nombre": "Tanisha Lyons",
+    "edad": 29,
+    "activo": true,
+    "promedio": 20.3651
+  },
+  {
+    "nombre": "Mildred Villarreal",
+    "edad": 27,
+    "activo": false,
+    "promedio": 25.1002
+  },
+  {
+    "nombre": "Short Harrell",
+    "edad": 20,
+    "activo": true,
+    "promedio": 38.8079
+  },
+  {
+    "nombre": "Annie Glass",
+    "edad": 28,
+    "activo": true,
+    "promedio": 22.0103
+  },
+  {
+    "nombre": "Sandoval Schneider",
+    "edad": 27,
+    "activo": true,
+    "promedio": 34.9238
+  },
+  {
+    "nombre": "Heath Ferrell",
+    "edad": 35,
+    "activo": false,
+    "promedio": 35.7601
+  },
+  {
+    "nombre": "Calhoun Lang",
+    "edad": 27,
+    "activo": false,
+    "promedio": 27.8427
+  },
+  {
+    "nombre": "Lyons Alvarado",
+    "edad": 33,
+    "activo": true,
+    "promedio": 20.6835
+  },
+  {
+    "nombre": "Washington Brewer",
+    "edad": 31,
+    "activo": false,
+    "promedio": 33.67
+  },
+  {
+    "nombre": "Simone Terrell",
+    "edad": 33,
+    "activo": false,
+    "promedio": 20.7948
+  },
+  {
+    "nombre": "Petty Ford",
+    "edad": 40,
+    "activo": true,
+    "promedio": 23.3758
+  },
+  {
+    "nombre": "Tanya Mccarthy",
+    "edad": 40,
+    "activo": true,
+    "promedio": 24.6944
+  },
+  {
+    "nombre": "Georgette Suarez",
+    "edad": 20,
+    "activo": false,
+    "promedio": 20.9294
+  },
+  {
+    "nombre": "Sargent Rosario",
+    "edad": 38,
+    "activo": false,
+    "promedio": 21.2999
+  },
+  {
+    "nombre": "Janice Carey",
+    "edad": 24,
+    "activo": false,
+    "promedio": 33.2721
+  },
+  {
+    "nombre": "Cline Mclean",
+    "edad": 31,
+    "activo": false,
+    "promedio": 32.9132
+  },
+  {
+    "nombre": "Burris Sears",
+    "edad": 28,
+    "activo": false,
+    "promedio": 20.6995
+  },
+  {
+    "nombre": "Peters Neal",
+    "edad": 23,
+    "activo": false,
+    "promedio": 29.4796
+  },
+  {
+    "nombre": "Ball Travis",
+    "edad": 25,
+    "activo": true,
+    "promedio": 31.7268
+  },
+  {
+    "nombre": "Watts Whitney",
+    "edad": 39,
+    "activo": false,
+    "promedio": 22.0013
+  },
+  {
+    "nombre": "Britney Winters",
+    "edad": 29,
+    "activo": false,
+    "promedio": 21.3266
+  },
+  {
+    "nombre": "Guerra Lawrence",
+    "edad": 34,
+    "activo": true,
+    "promedio": 21.3124
+  },
+  {
+    "nombre": "Shannon Santiago",
+    "edad": 40,
+    "activo": true,
+    "promedio": 28.3188
+  }
+]
