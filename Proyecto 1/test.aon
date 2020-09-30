@@ -1,0 +1,25 @@
+(
+    <
+        [sansa1_]= "reina del norte" , 
+        [arya_2] =69.420,
+        [jon_snow10]  = false ,
+        [B]  = True 
+    >,<
+        [sansa1_]= "reina del norte" , 
+        [arya_2] =69.420,
+        [jon_snow10]  = false ,
+        [B]  = True 
+    >
+),(
+    <
+        [sansa1_]= "reina del norte" , 
+        [arya_2] =-89.1,
+        [jon_snow10]  = false ,
+        [B]  = True 
+    >,<
+        [sansa1_]= "reina del norte" , 
+        [arya_2] =69.420,
+        [jon_snow10]  = false ,
+        [B]  = True 
+    >
+)
