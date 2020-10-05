@@ -1,12 +1,19 @@
 # Manual de Usuario
-SimpleQL CLI es un lenguaje de consultas que funciona únicamente a nivel de consola,
-su propósito es facilitar al usuario la búsqueda de registros completos en archivos
-json, en los que buscar registro por registro podría ser muy tedioso y cansado. No
-es el objetivo de SimpleQL convertirse en una versión de SQL, en su lugar, SimpleQL
-funciona como una versión minimalista con algunas similitudes que permiten al
-usuario cargar información a memoria por medio de comandos y obtener algunos
-datos generales acerca de esta, como el número de registros, el valor máximo de un
-atributo o incluso un reporte de en html de un conjunto de registros.
+SimpleQL CLI es una interfaz de línea de comandos que permite utilizar SimpleQL para
+realizar diferentes operaciones de análisis y consultas sobre un conjuto de datos que se
+encuentra alojado en memoria. Puede verse como una versión 2.0 del SimpleQL original,
+con la diferencia de que esta versión amplía las capacidades de análisis, consulta y
+búsqueda, al mismo tiempo que permite trabajar con registros que tengan estructuras
+diferentes. Esta versión de SimpleQL también implementa su propia notación de objetos
+para los archivos de texto que contienen la información inicial, esta se conoce como AON
+(Alternative Object Notation) y su estructura se define más adelante.
+Otra de las particularidades con las que cuenta SimpleQL CLI es que pretende minimizar
+los errores que pudieran ser generados al un usuario introducir caracteres extraños, por lo
+que tiene la capacidad de ignorar espacios y caracteres ajenos a sus instrucciones y
+comandos.
+SimpleQL CLI sigue siendo case insensitive y provee ahora la capacidad de ejecutar scripts
+con consultas para no tener que escribir estas una por una en la línea de comandos.
+
 
 
 Para poder usar SimpleQL CLI es necesario utilizar comandos específicos que tienen
