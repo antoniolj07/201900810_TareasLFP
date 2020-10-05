@@ -1,31 +1,12 @@
-PRINT IN GREEN;
-PRINT IN BLUE;
-PRINT IN PINK;
-PRINT IN Red;
-PRINT IN orange;
-PRINT IN yellow;
-CREATE SET fuck;
-LOAD INTO fuck FILES test.aon;
-USE SET fuck;
-LIST ATTRIBUTES;
-SELECT * WHERE edad < 15;
-SELECT nombre, edad WHERE promedio >=0 OR vivo = True;
-Max edad;
-Max promedio;
-Min edad;
-MIN promedio;
-COUNT edad, promedio;
-Sum edad, promedio;
-SUM *;
-REPORT TO count COUNT nombre, edad;
-REPORT TO cunt COUNT *
-REPORT TO lista LIST ATTRIBUTES
-REPORT TO archivo SELECT * WHERE edad < 15
-REPORT TO archivo SELECT nombre, edad WHERE promedio >=0 OR vivo = True
-REPORT TO archivo Max edad
-REPORT TO archivo Max promedio
-REPORT TO archivo MIN promedio
-REPORT TO archivo Min edad
-REPORT TO archivo Sum edad, promedio
-REPORT TO archivo SUM *
+CREATE SET estudiante;
+LOAD INTO estudiante FILES ejemplo.aon, test.aon;
+USE SET estudiante;
+REPORT TO file SELECT * WHERE promedio_persona > 80 or activo = True;
+REPORT TO pagina SELECT nombre_persona, apellido_persona, edad_persona WHERE promedio_persona > 80;
+REPORT TO cunt COUNT *;
+REPORT TO sum SUM *;
+REPORT TO max MAX edad_persona;
+REPORT TO min MIN promedio_persona;
+REPORT TOKENS;
+
 

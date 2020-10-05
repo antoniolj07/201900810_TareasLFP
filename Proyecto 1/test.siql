@@ -1,6 +1,10 @@
-CREATE SET fuck;
-LOAD INTO fuck files test.aon;
-USE SET fuck;
-COUNT nombre, edad;
-REPORT TO hijole SELECT * WHERE nombre != "Jorge";
-REPORT TOKENS;
+CREATE SET set1;
+LOAD INTO set1 FILES ejemplo.aon, test.aon;
+USE SET set1;
+REPORT TO file1 SELECT edad_persona, apellido_persona, activo WHERE nombre_persona != "Jon";
+REPORT TO pagina1 SELECT * WHERE edad_persona > 30 XOR activo = False;
+REPORT TO cunt1 COUNT apellido_persona;
+REPORT TO sum1 SUM edad_persona;
+REPORT TO max1 MAX promedio_persona;
+REPORT TO min1 MIN edad_persona;
+

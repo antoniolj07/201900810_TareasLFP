@@ -14,7 +14,7 @@ class Menu:
     comandos = ['create set', 'load into', 'use set', 'select', 'list attributes', 'print in', 'max', 'min', 'sum', 'count', 'report to', 'script', 'report tokens']
     def __init__(self):
         self.afd()
-        #SCRIPT script.siql
+        #SCRIPT script.siql, test.siql
         #SCRIPT test.siql
     def afd(self):
         self.sets = []
@@ -121,10 +121,7 @@ class Menu:
                             print('No se ha seleccionado ningun set')
                         break
                     elif mensaje[x].lower() in ('c'):
-                        if self.indice != -1:
-                            sc = Script(mensaje, self.sets, self.indice)
-                        else:
-                            print('No se ha seleccionado ningun set')    
+                        sc = Script(mensaje, self.sets, self.indice)  
                         break
                     else:
                         print('Entrada invalida')

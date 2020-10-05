@@ -88,13 +88,13 @@ class Script:
                     error = True
                     break
         if not error:
-            print(paths)
+            #print(paths)
             self.readSript(paths)
             
     def readSript(self, paths):
         if len(paths) > 0:
+            contenido = ''
             for path in paths:
-                contenido = ''
                 try:
                     with open(path, 'r') as f:
                         lineas = f.readlines()

@@ -1,40 +1,42 @@
 (
     <
-        [nombre]= "Jorge" , 
-        [promedio] =null,
-        [edad]  = 20 ,
-        [vivo]  = False 
-    >,<
-        [nombre]= Null , 
-        [promedio] =71.4,
-        [edad]  = 20 ,
-        [vivo]  = False
-    >
-)
-,(
+        [nombre_persona] = "Robert",
+        [apellido_persona] = "Baratheon",
+        [edad_persona] = 59,
+        [promedio_persona] = 89,
+        [activo] = False,
+        [aprobado] = True 
+    >,
     <
-        [nombre]= "Manny" , 
-        [promedio] =-89.1,
-        [edad]  = 10 ,
-        [vivo]  = False
-    >,<
-        [nombre]= "Claer" , 
-        [promedio] =69.420,
-        [edad]  = 38 ,
-        [vivo]  = True 
-    >
-)
-,
-(
+        [nombre_persona] = "Cersei",
+        [apellido_persona] = "Lannister",
+        [edad_persona] = 45,
+        [promedio_persona] = 61.9,
+        [activo] = True,
+        [aprobado] = False 
+    >,
     <
-        [nombre]= "Patricio" , 
-        [promedio] =-0.25,
-        [edad]  = null ,
-        [vivo]  = False
-    >,<
-        [nombre]= "Andrea" , 
-        [promedio] =100,
-        [edad]  = 20 ,
-        [vivo]  = False 
+        [nombre_persona] = "Jon",
+        [apellido_persona] = "Snow",
+        [edad_persona] = 21,
+        [promedio_persona] = 99,
+        [activo] = False,
+        [aprobado] = Null 
+    >,
+    <
+        [nombre_persona] = "Daenerys",
+        [apellido_persona] = "Targaryen",
+        [edad_persona] = 21,
+        [promedio_persona] = 98.9,
+        [activo] = True,
+        [aprobado] = True
+    >,
+    <
+        [nombre_persona] = "Tyrion",
+        [apellido_persona] = "Lannister",
+        [edad_persona] = 40,
+        [promedio_persona] = 100,
+        [activo] = True,
+        [aprobado] = False 
     >
 )
