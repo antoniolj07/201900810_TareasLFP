@@ -1,25 +1,40 @@
 (
     <
-        [sansa1_]= "reina del norte" , 
-        [arya_2] =69.420,
-        [jon_snow10]  = false ,
-        [B]  = True 
+        [nombre]= "Jorge" , 
+        [promedio] =null,
+        [edad]  = 20 ,
+        [vivo]  = False 
     >,<
-        [sansa1_]= "reina del norte" , 
-        [arya_2] =69.420,
-        [jon_snow10]  = false ,
-        [B]  = True 
+        [nombre]= Null , 
+        [promedio] =71.4,
+        [edad]  = 20 ,
+        [vivo]  = False
     >
-),(
+)
+,(
     <
-        [sansa1_]= "reina del norte" , 
-        [arya_2] =-89.1,
-        [jon_snow10]  = false ,
-        [B]  = True 
+        [nombre]= "Manny" , 
+        [promedio] =-89.1,
+        [edad]  = 10 ,
+        [vivo]  = False
     >,<
-        [sansa1_]= "reina del norte" , 
-        [arya_2] =69.420,
-        [jon_snow10]  = false ,
-        [B]  = True 
+        [nombre]= "Claer" , 
+        [promedio] =69.420,
+        [edad]  = 38 ,
+        [vivo]  = True 
+    >
+)
+,
+(
+    <
+        [nombre]= "Patricio" , 
+        [promedio] =-0.25,
+        [edad]  = null ,
+        [vivo]  = False
+    >,<
+        [nombre]= "Andrea" , 
+        [promedio] =100,
+        [edad]  = 20 ,
+        [vivo]  = False 
     >
 )

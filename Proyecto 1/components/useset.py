@@ -55,7 +55,7 @@ class UseSet:
             elif uEst == 6:
                 if mensaje[x].lower() in (' '):
                     uEst = 6
-                elif mensaje[x].isalpha():
+                elif mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     setUsed = setUsed + mensaje[x]
                     uEst = 7
                 else:
@@ -63,7 +63,7 @@ class UseSet:
                     print('Entrada invalida shit')
                     break
             elif uEst == 7:
-                if mensaje[x].isalpha():
+                if mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     setUsed = setUsed + mensaje[x]
                     uEst = 7
                 else:

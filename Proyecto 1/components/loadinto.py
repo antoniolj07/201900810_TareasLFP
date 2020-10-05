@@ -71,7 +71,7 @@ class LoadInto:
                 selectedSet = ''
                 if mensaje[x].lower() in (' '):
                     lEst = 8
-                elif mensaje[x].isalpha():
+                elif mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     selectedSet = selectedSet + mensaje[x]
                     lEst = 9
                 else:
@@ -79,7 +79,7 @@ class LoadInto:
                     print('Entrada invalida')
                     break
             elif lEst == 9:
-                if mensaje[x].isalpha():
+                if mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     selectedSet = selectedSet + mensaje[x]
                     lEst = 9
                 elif mensaje[x] in (' '):
@@ -156,6 +156,7 @@ class LoadInto:
     def leer_archivos(self, archivos):
         r = AfdAon(archivos)
         self.registros = r.registros
+        self.atributos = r.atributos
 
 
 

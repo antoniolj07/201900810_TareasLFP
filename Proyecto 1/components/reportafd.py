@@ -2,8 +2,8 @@ from reportto import ReportTo
 from reporttokens import ReportTokens
 
 class Report:
-    def __init__(self, mensaje):
-        print('afd report')
+    def __init__(self, mensaje, nset={}):
+        self.nset = nset
         self.afd_report(mensaje)
     
     def afd_report(self, mensaje):
@@ -70,10 +70,10 @@ class Report:
                     break
             elif rEst == 8:
                 if mensaje[x].lower() in ('k'):
-                    rTokens = ReportTokens(mensaje)
+                    rTokens = ReportTokens(mensaje, self.nset)
                     break
                 elif mensaje[x] in (' '):
-                    rTo = ReportTo(mensaje)
+                    rTo = ReportTo(mensaje, self.nset)
                     break
                 else:
                     print('Entrada invalida')

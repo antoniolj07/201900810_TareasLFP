@@ -5,6 +5,7 @@ class AfdAon:
     def afd(self, archivos):
         registros = []
         error = False
+        atributos = []
         for archivo in archivos:
             contenido = ''
             try:
@@ -61,6 +62,7 @@ class AfdAon:
                             atributo = atributo + contenido[x]
                         elif contenido[x] in (']'):
                             registro[atributo] = ''
+                            atributos.append(atributo)
                             e = 5
                         else:
                             print('El archivo no tiene la estructura necesaria')
@@ -80,11 +82,12 @@ class AfdAon:
                         if contenido[x] in (' '):
                             e = 6
                         elif contenido[x] in ('\"'):
+                            valor = valor + contenido[x]
                             e = 7
                         elif contenido[x].isdigit() or contenido[x] in ('-'):
                             valor = valor + contenido[x]
                             e = 11
-                        elif contenido[x].lower() in ('t','f'):
+                        elif contenido[x].lower() in ('t','f','n'):
                             valor = valor + contenido[x]
                             e = 12
                         else:
@@ -96,6 +99,7 @@ class AfdAon:
                             valor = valor + contenido[x]
                             e = 7
                         elif contenido[x] in ('\"'):
+                            valor = valor + contenido[x]
                             e = 8
                             registro[atributo] = valor
                         else:
@@ -152,7 +156,7 @@ class AfdAon:
                             error = True
                             break
                     elif e == 12:
-                        if contenido[x].lower() in ('t','r','u','e','f','a','l','s','e'):
+                        if contenido[x].lower() in ('t','r','u','e','f','a','l','s','e','n'):
                             valor = valor + contenido[x]
                             e = 12
                         elif contenido[x] in (' '):
@@ -169,5 +173,7 @@ class AfdAon:
                             error = True
                             break
         self.registros = registros
+        self.atributos = atributos
+        print(registros)
                 
 

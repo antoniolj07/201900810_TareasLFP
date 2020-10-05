@@ -11,18 +11,18 @@ from suma import Suma
 from script import Script
 from reportafd import Report
 class Menu:
-    entrada = ''
     comandos = ['create set', 'load into', 'use set', 'select', 'list attributes', 'print in', 'max', 'min', 'sum', 'count', 'report to', 'script', 'report tokens']
-
     def __init__(self):
         self.afd()
-
+        #SCRIPT script.siql
+        #SCRIPT test.siql
     def afd(self):
         self.sets = []
         self.setUsing = {}
+        self.indice = -1
+        self.entrada = ''
         print('===> Bienvenido a SimpleQL CLIT <===')
         while self.entrada != 'salir':
-            entrada = ''
             mensaje = input()
             estado = 0
             for x in range(len(mensaje)):
@@ -62,7 +62,10 @@ class Menu:
                         break
                             
                     elif mensaje[x].lower() in ('o'):
-                        coun = Count(mensaje)
+                        if self.indice != -1:
+                            coun = Count(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')    
                         break
                     else:
                         print('Entrada invalida')
@@ -82,7 +85,10 @@ class Menu:
                                 print('No se encontro set: ',lInto.selectedSet)
                         break
                     elif mensaje[x].lower() in ('i'):
-                        lAtt = ListAttributes(mensaje, 'set')
+                        if self.indice != -1:
+                            lAtt = ListAttributes(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')
                         break
                     else:
                         print('Entrada invalida')
@@ -103,13 +109,22 @@ class Menu:
                     break
                 elif estado == 4:
                     if mensaje[x].lower() in ('e'):
-                        sel = Select(mensaje)
+                        if self.indice != -1:
+                            sel = Select(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')
                         break
                     elif mensaje[x].lower() in ('u'):
-                        su = Suma(mensaje)
+                        if self.indice != -1:
+                            su = Suma(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')
                         break
                     elif mensaje[x].lower() in ('c'):
-                        sc = Script(mensaje)
+                        if self.indice != -1:
+                            sc = Script(mensaje, self.sets, self.indice)
+                        else:
+                            print('No se ha seleccionado ningun set')    
                         break
                     else:
                         print('Entrada invalida')
@@ -119,13 +134,22 @@ class Menu:
                     break
                 elif estado == 6:
                     if mensaje[x].lower() in ('a'):
-                        ma = Max(mensaje)
+                        if self.indice != -1:
+                            ma = Max(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')
                         break
                     elif mensaje[x].lower() in ('i'):
-                        mi = Min(mensaje)
+                        if self.indice != -1:
+                            mi = Min(mensaje, self.sets[self.indice])
+                        else:
+                            print('No se ha seleccionado ningun set')
                         break
                 elif estado == 7:
-                    re = Report(mensaje)
+                    if self.indice != -1:
+                        re = Report(mensaje, self.sets[self.indice])
+                    else:
+                        print('No se ha seleccionado ningun set')
                     break
                 else:
                     print('Entrada invalida')

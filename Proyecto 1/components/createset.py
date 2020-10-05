@@ -89,7 +89,7 @@ class CreateSet:
                     print('Entrada invalida')
                     break
             elif cEst == 9:
-                if mensaje[x].isalpha():
+                if mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     newSet['idSet'] = newSet['idSet'] + mensaje[x]
                     entrada = entrada + mensaje[x]
                     cEst = 9
@@ -101,7 +101,7 @@ class CreateSet:
                     print('Entrada invalida')
                     break
             elif cEst == 10:
-                if mensaje[x].isalpha():
+                if mensaje[x].isalpha() or mensaje[x].isdigit() or mensaje[x] in ('-','_'):
                     newSet['idSet'] = newSet['idSet'] + mensaje[x]
                     entrada = entrada + mensaje[x]
                     cEst = 10

@@ -1,0 +1,6 @@
+CREATE SET fuck;
+LOAD INTO fuck files test.aon;
+USE SET fuck;
+COUNT nombre, edad;
+REPORT TO hijole SELECT * WHERE nombre != "Jorge";
+REPORT TOKENS;
