@@ -7,12 +7,22 @@ class Pila:
     def __init__(self, tokens):
         print('Inicio de Pila')
         for token in tokens:
-            self.tokens.append(token['token'])
+            if token['lexema'] == 'true':
+                token['token'] = 'tkn_true'
+                token['descripcion'] = 'palabra reservada true'
+            elif token['lexema'] == 'false':
+                token['token'] = 'tkn_false'
+                token['descripcion'] = 'palabra reservada false'
+
+        for token in tokens:
+            if not token['token'] in ('tkn_diagonal_asterisco','tkn_contenido_comentario','tkn_asterisco_diagonal'):
+                self.tokens.append(token['token'])
                 
         self.automataPila()
 
     def automataPila(self):
         tokens = self.tokens
+        tokens.append('#')
         pila = []
         iteraciones = []
         iteracion = {
@@ -42,33 +52,29 @@ class Pila:
                     pila.pop()
                 pila.append('#')
                 iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(p, $, $, q, S)'}
-                iteraciones.append(iteracion)
+                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(p, $, $, q, S)'})
                 self.imp(iteracion)
                 e = 2
                 iterTerminado = True
             elif e == 2:
-                if pila[p] in ('#') and len(tokens) == 0:
-                    pila.pop()
-                    iterTerminado = True
-                elif token in pila[p]:
+                if token in pila[p]:
                     tokens.pop(0)
-                    iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, '+token+', '+pila[p]+', q, $)'}
                     pila.pop()
-                    iteraciones.append(iteracion)
-                    self.imp(iteracion)
-                    iterTerminado = True
-                elif token in ('tkn_llave_cerrada'):
-                    tokens.pop(0)
-                    iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, }, }, q, $)'}
-                    pila.pop()
-                    iteraciones.append(iteracion)
+                    iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, '+token+', '+token+', q, $)'}
+                    iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, '+token+', '+token+', q, $)'})
                     self.imp(iteracion)
                     iterTerminado = True
                 else:    
                     if pila[p] in ('#') and len(tokens) != 0:
                         pila.append('S')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(p, $, $, q, '+self.dicc(token)+')'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(p, $, $, q, '+self.dicc(token)+')'})
+                        self.imp(iteracion)
+                        iterTerminado = True
+                    elif pila[p] in ('tkn_llave_cerrada') and not token in ('tkn_llave_cerrada'):
+                        pila.append('S')
+                        iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, $, q, '+self.dicc(token)+')'}
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, $, q, '+self.dicc(token)+')'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('S'):
@@ -80,13 +86,18 @@ class Pila:
                             pila.append('tkn_identificador')
                             pila.append('tkn_var')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, var id = V)'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, var id = V)'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('LLAMADA_FUNCION'):
                             pila.append('tkn_punto_coma')
                             pila.append('tkn_parentesis_cerrado')
-                            pila.append('tkn_')
+                            pila.append('F')
+                            pila.append('tkn_parentesis_abierto')
+                            pila.append('tkn_identificador_funcion')
+                            iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, idFuncion ( F ) ; )'}
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, idFuncion ( F ) ; )'})
+                            self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_LET'):
                             pila.append('L')
@@ -94,7 +105,7 @@ class Pila:
                             pila.append('tkn_identificador')
                             pila.append('tkn_let')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, Let id = L)'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, Let id = L)'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_CONST'):
@@ -103,30 +114,36 @@ class Pila:
                             pila.append('tkn_identificador')
                             pila.append('tkn_const')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, const id = C)'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, const id = C)'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_IF'):
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('I')
                             pila.append('tkn_parentesis_abierto')
                             pila.append('tkn_if')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, if ( I ){ )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, if ( I ){ )'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_WHILE'):
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('I')
                             pila.append('tkn_parentesis_abierto')
                             pila.append('tkn_while')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, while ( I ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, while ( I ) { )'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_FOREACH'):
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('tkn_identificador')
@@ -135,17 +152,48 @@ class Pila:
                             pila.append('tkn_parentesis_abierto')
                             pila.append('tkn_foreach')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, foreach ( id in id ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, foreach ( id in id ) { )'})
                             self.imp(iteracion)
                             iterTerminado = True
                         elif self.dicc(token) in ('SENTENCIA_SWITCH'):
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('tkn_identificador')
                             pila.append('tkn_parentesis_abierto')
                             pila.append('tkn_switch')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, switch ( id ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, switch ( id ) { )'})
+                            self.imp(iteracion)
+                            iterTerminado = True
+                        elif self.dicc(token) in ('SENTENCIA_CASE'):
+                            pila.append('S')
+                            pila.append('tkn_dos_puntos')
+                            pila.append('tkn_case_numero')
+                            pila.append('tkn_case')
+                            iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, case nun : )'}
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, case nun : )'})
+                            self.imp(iteracion)
+                            iterTerminado = True
+                        elif self.dicc(token) in ('SENTENCIA_DEFAULT'):
+                            pila.append('S')
+                            pila.append('tkn_dos_puntos')
+                            pila.append('tkn_default')
+                            iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, default : )'}
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, default : )'})
+                            self.imp(iteracion)
+                            iterTerminado = True
+                        elif self.dicc(token) in ('SENTENCIA_BREAK'):
+                            pila.append('tkn_punto_coma')
+                            pila.append('tkn_break')
+                            iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, break ; )'}
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, break ; )'})
+                            self.imp(iteracion)
+                            iterTerminado = True
+                        elif token in ('tkn_llave_cerrada'):
+                            iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, S, q, $ )'}
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, S, q, break ; )'})
                             self.imp(iteracion)
                             iterTerminado = True
                     elif pila[p] in ('V'):
@@ -156,7 +204,7 @@ class Pila:
                         pila.append('tkn_cadena_texto')
                         pila.append('tkn_comillas_dobles')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, V, q, " cadena " ;)'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, V, q, " cadena " ;)'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('P'):
@@ -164,7 +212,7 @@ class Pila:
                         pila.pop()
                         pila.append('tkn_identificador')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, P, q, id)'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, P, q, id)'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('L'):
@@ -173,7 +221,7 @@ class Pila:
                         pila.append('tkn_punto_coma')
                         pila.append('B')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, L, q, B ;)'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, L, q, B ;)'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('B'):
@@ -181,7 +229,7 @@ class Pila:
                         pila.pop()
                         pila.append('tkn_true')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, B, q, true )'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, B, q, true )'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('C'):
@@ -190,17 +238,24 @@ class Pila:
                         pila.append('tkn_punto_coma')
                         pila.append('tkn_numero')
                         iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, C, q, numero )'}
-                        iteraciones.append(iteracion)
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, C, q, numero )'})
                         self.imp(iteracion)
                         iterTerminado = True
                     elif pila[p] in ('I'):
                         utlimoReemplazo = 'I'
                         pila.pop()
                         pila.append('tkn_identificador')
-                        iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, C, q, numero )'}
-                        iteraciones.append(iteracion)
+                        iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, I, q, id )'}
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, I, q, id )'})
                         self.imp(iteracion)
                         iterTerminado = True
+                    elif pila[p] in ('F'):
+                        utlimoReemplazo = 'F'
+                        pila.pop()
+                        pila.append('tkn_identificador')
+                        iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, id )'}
+                        iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, id )'})
+                        self.imp(iteracion)
 
             if not iterTerminado:   
                 if self.esTerminal(pila[p]) and len(token) > 0:
@@ -210,67 +265,104 @@ class Pila:
                             pila.pop()
                             pila.pop()
                             pila.pop()
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_flecha')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('P')
                             pila.append('tkn_parentesis_abierto')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, V, q, ( P ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, V, q, ( P ) { )'})
                             self.imp(iteracion)
                         elif utlimoReemplazo in ('P'):
                             if token in ('tkn_parentesis_cerrado'):
                                 pila.pop()
                                 iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, P, q, , $ )'}
-                                iteraciones.append(iteracion)
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, P, q, , $ )'})
                                 self.imp(iteracion)
                             else:
                                 pila.append('tkn_identificador')
                                 pila.append('tkn_coma')
                                 iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, P, q, , id )'}
-                                iteraciones.append(iteracion)
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, P, q, , id )'})
                                 self.imp(iteracion)
                         elif utlimoReemplazo in ('L'):
                             pila.pop()
                             pila.pop()
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_flecha')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('P')
                             pila.append('tkn_parentesis_abierto')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, L, q, ( P ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, L, q, ( P ) { )'})
                             self.imp(iteracion)
                         elif utlimoReemplazo in ('B'):
                             pila.pop()
                             pila.append('tkn_false')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, B, q, false )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, B, q, false )'})
                             self.imp(iteracion)
                             utlimoReemplazo = 'L'
                         elif utlimoReemplazo in ('C'):
                             pila.pop()
                             pila.pop()
+                            pila.append('tkn_llave_cerrada')
+                            pila.append('S')
                             pila.append('tkn_llave_abierta')
                             pila.append('tkn_flecha')
                             pila.append('tkn_parentesis_cerrado')
                             pila.append('P')
                             pila.append('tkn_parentesis_abierto')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, C, q, ( P ) { )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, C, q, ( P ) { )'})
                             self.imp(iteracion)
                         elif utlimoReemplazo in ('I'):
                             pila.pop()
                             pila.append('tkn_true')
                             iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, I, q, true )'}
-                            iteraciones.append(iteracion)
+                            iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, I, q, true )'})
                             self.imp(iteracion)
                             utlimoReemplazo = 'B'
+                        elif utlimoReemplazo in ('F'):
+                            if token in ('tkn_coma'):
+                                pila.append('F')
+                                pila.append('tkn_coma')
+                                iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, ,F )'}
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, ,F )'})
+                                self.imp(iteracion)
+                            elif token in ('tkn_true'):
+                                pila.pop()
+                                pila.append('tkn_true')
+                                iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, true )'}
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, true )'})
+                                self.imp(iteracion)
+                            elif token in ('tkn_false'):
+                                pila.pop()
+                                pila.append('tkn_false')
+                                iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, false )'}
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, false )'})
+                                self.imp(iteracion)
+                            elif token in ('tkn_comillas_dobles'):
+                                pila.pop()
+                                pila.append('tkn_comillas_dobles')
+                                pila.append('tkn_cadena_texto')
+                                pila.append('tkn_comillas_dobles')
+                                iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, " texto " )'}
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, " texto " )'})
+                                self.imp(iteracion)
+                            elif token in ('tkn_parentesis_cerrado'):
+                                pila.pop()
+                                iteracion = {'pila': pila, 'entrada': tokens, 'trancision': '(q, $, F, q, $ )'}
+                                iteraciones.append({'pila': str(pila), 'entrada': str(tokens), 'trancision': '(q, $, F, q, $ )'})
+                                self.imp(iteracion)
 
             input()
                 
         print('Exitoo')
-        print(iteraciones)
         self.generarHtml(iteraciones)
 
     def esTerminal(self, simbolo):
@@ -281,7 +373,7 @@ class Pila:
 
     def dicc(self, token):
         terminal = ''
-        if token in ('tkn_identificador'):
+        if token in ('tkn_identificador_funcion'):
             terminal = 'LLAMADA_FUNCION'
         elif token in ('tkn_if'):
             terminal = 'SENTENCIA_IF'
@@ -343,8 +435,8 @@ TRANCISION : {}
                                 entrada = entrada + elemento
 
                             with tr():
-                                td(pila)
-                                td(entrada)
+                                td(iteracion['pila'])
+                                td(iteracion['entrada'])
                                 td(iteracion['trancision'])
 
         with open('pages/pila.html', 'wb') as file:

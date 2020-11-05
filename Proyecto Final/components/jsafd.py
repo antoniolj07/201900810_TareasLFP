@@ -1030,7 +1030,7 @@ class JsAfd:
                             e = 10
                     elif sest == 6:
                         if linea['contenido'][x] in ('('):
-                            tok = {'lexema': '(', 'token': 'tkn_parentesis_abiertos', 'descripcion': 'parentesis abiertos',
+                            tok = {'lexema': '(', 'token': 'tkn_parentesis_abierto', 'descripcion': 'parentesis abiertos',
                             'linea': linea['linea'], 'columna': x + 1}
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}

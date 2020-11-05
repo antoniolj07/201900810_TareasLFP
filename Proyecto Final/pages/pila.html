@@ -18,64 +18,109 @@
         </thead>
         <tbody>
           <tr>
-            <td>$, </td>
-            <td>['tkn_foreach', 'tkn_parentesis_abierto', 'tkn_elemento_identificador', 'tkn_in', 'tkn_identificador', 'tkn_parentesis_cerrado', 'tkn_llave_abierta', 'tkn_llave_cerrada']</td>
+            <td>$</td>
+            <td>['tkn_var', 'tkn_identificador', 'tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
             <td>(Io, $, $, p, #)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>['#']</td>
+            <td>['tkn_var', 'tkn_identificador', 'tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
             <td>(p, $, $, q, S)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(p, $, $, q, SENTENCIA_FOREACH)</td>
+            <td>['#', 'S']</td>
+            <td>['tkn_var', 'tkn_identificador', 'tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(p, $, $, q, SENTENCIA_VAR)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, $, S, q, foreach ( id in id ) { )</td>
+            <td>['#', 'V', 'tkn_signo_igual', 'tkn_identificador', 'tkn_var']</td>
+            <td>['tkn_var', 'tkn_identificador', 'tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, $, S, q, var id = V)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_foreach, tkn_foreach, q, $)</td>
+            <td>['#', 'V', 'tkn_signo_igual', 'tkn_identificador']</td>
+            <td>['tkn_identificador', 'tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_var, tkn_var, q, $)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_parentesis_abierto, tkn_parentesis_abierto, q, $)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_elemento_identificador, tkn_elemento_identificador, q, $)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_in, tkn_in, q, $)</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>['#', 'V', 'tkn_signo_igual']</td>
+            <td>['tkn_signo_igual', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
             <td>(q, tkn_identificador, tkn_identificador, q, $)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_parentesis_cerrado, tkn_parentesis_cerrado, q, $)</td>
+            <td>['#', 'V']</td>
+            <td>['tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_signo_igual, tkn_signo_igual, q, $)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, tkn_llave_abierta, tkn_llave_abierta, q, $)</td>
+            <td>['#', 'tkn_punto_coma', 'tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles']</td>
+            <td>['tkn_comillas_dobles', 'tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, $, V, q, &quot; cadena &quot; ;)</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td>(q, }, }, q, $)</td>
+            <td>['#', 'tkn_punto_coma', 'tkn_comillas_dobles', 'tkn_cadena_texto']</td>
+            <td>['tkn_cadena_texto', 'tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_comillas_dobles, tkn_comillas_dobles, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'tkn_punto_coma', 'tkn_comillas_dobles']</td>
+            <td>['tkn_comillas_dobles', 'tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_cadena_texto, tkn_cadena_texto, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'tkn_punto_coma']</td>
+            <td>['tkn_punto_coma', 'tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_comillas_dobles, tkn_comillas_dobles, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#']</td>
+            <td>['tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_punto_coma, tkn_punto_coma, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'S']</td>
+            <td>['tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(p, $, $, q, SENTENCIA_CONST)</td>
+          </tr>
+          <tr>
+            <td>['#', 'C', 'tkn_signo_igual', 'tkn_identificador', 'tkn_const']</td>
+            <td>['tkn_const', 'tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, $, S, q, const id = C)</td>
+          </tr>
+          <tr>
+            <td>['#', 'C', 'tkn_signo_igual', 'tkn_identificador']</td>
+            <td>['tkn_identificador', 'tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_const, tkn_const, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'C', 'tkn_signo_igual']</td>
+            <td>['tkn_signo_igual', 'tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_identificador, tkn_identificador, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'C']</td>
+            <td>['tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, tkn_signo_igual, tkn_signo_igual, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#', 'tkn_punto_coma', 'tkn_numero']</td>
+            <td>['tkn_numero', 'tkn_punto_coma', '#']</td>
+            <td>(q, $, C, q, numero )</td>
+          </tr>
+          <tr>
+            <td>['#', 'tkn_punto_coma']</td>
+            <td>['tkn_punto_coma', '#']</td>
+            <td>(q, tkn_numero, tkn_numero, q, $)</td>
+          </tr>
+          <tr>
+            <td>['#']</td>
+            <td>['#']</td>
+            <td>(q, tkn_punto_coma, tkn_punto_coma, q, $)</td>
+          </tr>
+          <tr>
+            <td>[]</td>
+            <td>[]</td>
+            <td>(q, #, #, q, $)</td>
           </tr>
         </tbody>
       </table>
