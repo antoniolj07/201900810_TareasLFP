@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pila</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5 mb-5">
+      <h1>Pila</h1>
+      <hr>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Pila</th>
+            <th>Entrada</th>
+            <th>Trancision</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$, </td>
+            <td>['tkn_foreach', 'tkn_parentesis_abierto', 'tkn_elemento_identificador', 'tkn_in', 'tkn_identificador', 'tkn_parentesis_cerrado', 'tkn_llave_abierta', 'tkn_llave_cerrada']</td>
+            <td>(Io, $, $, p, #)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(p, $, $, q, S)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(p, $, $, q, SENTENCIA_FOREACH)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, $, S, q, foreach ( id in id ) { )</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_foreach, tkn_foreach, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_parentesis_abierto, tkn_parentesis_abierto, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_elemento_identificador, tkn_elemento_identificador, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_in, tkn_in, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_identificador, tkn_identificador, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_parentesis_cerrado, tkn_parentesis_cerrado, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, tkn_llave_abierta, tkn_llave_abierta, q, $)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>(q, }, }, q, $)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

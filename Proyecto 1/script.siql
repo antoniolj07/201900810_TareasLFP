@@ -1,12 +1,5 @@
 CREATE SET estudiante;
 LOAD INTO estudiante FILES ejemplo.aon, test.aon;
-USE SET estudiante;
-REPORT TO file SELECT * WHERE promedio_persona > 80 or activo = True;
-REPORT TO pagina SELECT nombre_persona, apellido_persona, edad_persona WHERE promedio_persona > 80;
-REPORT TO cunt COUNT *;
-REPORT TO sum SUM *;
-REPORT TO max MAX edad_persona;
-REPORT TO min MIN promedio_persona;
-REPORT TOKENS;
+
 
 
