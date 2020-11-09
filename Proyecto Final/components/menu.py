@@ -51,7 +51,6 @@ Seleccione una de las siguientes opciones
 
     def irDiagrama(self):
         if not len(self.tokens) == 0:
-            print('Generar token y errores')
             diagrama = Diagrama(self.tokens)
         else:
             print('No hay script seleccionado')

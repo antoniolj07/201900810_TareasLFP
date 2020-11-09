@@ -1,16 +1,10 @@
-if (id) {
-    foreach(num in numeros) {
-        while (true) {
-            switch (num) {
-                case 1:
-                    llamadita();
-                case 2:
-                    break;
-                default:
-                    jiji("jiji");
-                    break;
+if (esNum) {
+    var num = "fuck";
+}
+let funficiton = (param, param2) => {
+    llamadita(false);
+}
 
-            }
-        }
-    }
+const fifi = () => {
+    funficiton(false, "no");
 }
