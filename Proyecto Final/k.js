@@ -1,21 +1,17 @@
-const num = -234567;
-const fun = () => {
-    print("me cago en tus muertos");
-}
-var nombre = "google";
-while (nombre) {
-    let bool = false;
-}
 switch (param) {
     case 1:
-        fun("mensaje", false);
-        /*
-        que hubo
-        */
+        print("hola");
+        break;
     case 2:
+        var nombre = "jorge";
         break;
     default:
-        if (true) {
-            let baby = false;
-        }
+        const num = 9;
+        break;
+}
+
+let fifif = (hdp, crt) => {
+    while (hdp) {
+        print("hola", crt);
+    }
 }

@@ -20,10 +20,6 @@ class GeneraHtml:
                 token['descripcion'] = 'palabra reservada false'
 
             self.tokens.append(token)
-            
-        for token in self.tokens:
-            print('{} === {} === {} === {} === {}'.format(token['lexema'], token['token'], token['descripcion'], token['linea'], token['columna']))
-
 
         doc = dominate.document(title = 'tokensHtml')
         with doc.head:

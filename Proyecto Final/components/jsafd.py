@@ -33,7 +33,6 @@ class JsAfd:
     def afd(self, contenido):
         tokensTotales = []
         errores = []
-        print(contenido)
         e = 0
         dest = 0
         lest = 0
@@ -125,6 +124,8 @@ class JsAfd:
                         'linea': linea['linea'], 'columna': x + 1}
                         tokensTotales.append(tok)
                         tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                    elif linea['contenido'][x] in (' '):
+                        e = 0
                     else:
                         if linea['contenido'][x].isalpha() or linea['contenido'][x] in ('_'):
                             print(linea['contenido'][x])
@@ -134,10 +135,12 @@ class JsAfd:
                             tok['columna'] = x + 1
                         elif linea['contenido'][x] in (' '):
                             print(linea['contenido'][x])
+                        elif linea['contenido'][x] in (chr(9)):
+                            print(linea['contenido'][x])
                         else:
                             error = {'linea': linea['linea'], 'columna': x+1}
                             errores.append(error)
-                            print('hubo un error jiji')
+                            print('hubo un error :(')
                             e = 0
                 elif e == 1:
                     if dest == 0:
@@ -246,10 +249,25 @@ class JsAfd:
                         if linea['contenido'][x] in (' '):
                             print(linea['contenido'][x])
                             lest = 5
-                        elif linea['contenido'][x] in ('f','t'):
+                        elif linea['contenido'][x].isalpha():
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             tok['linea'] = linea['linea']
                             tok['columna'] = x + 1
+                            tok['token'] = 'tkn_boolean'
+                            tok['descripcion'] = 'palabra reservada booleana'
+                            lest = 7
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('-','+'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            tok['token'] = 'tkn_numero'
+                            tok['descripcion'] = 'numero'
+                            lest = 7
+                        elif linea['contenido'][x] in ('\"'):
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             lest = 6
                         elif linea['contenido'][x] in ('('):
                             print(linea['contenido'][x])
@@ -264,23 +282,57 @@ class JsAfd:
                             errores.append(error)
                             print('hubo un error')
                     elif lest == 6:
-                        if linea['contenido'][x] in ('r','u','e','a','l','s'):
+                        if not linea['contenido'][x] in ('\"'):
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['descripcion'] = 'cadena de texto'
+                            tok['token'] = 'tkn_cadena_texto'
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
                             lest = 6
-                            if linea['contenido'][x] in ('r'):
-                                tok['token'] = 'tkn_true'
-                                tok['descripcion'] = 'palabra reservada true'
-                            elif linea['contenido'][x] in ('a'):
-                                tok['token'] = 'tkn_false'
-                                tok['descripcion'] = 'palabra reservada false'
+                        elif linea['contenido'][x] in ('\"'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            lest = 8
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif lest == 7:
+                        if linea['contenido'][x].isalpha():
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['token'] = 'tkn_boolean'
+                            tok['descripcion'] = 'palabra reservada booleano'
+                            lest = 7
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('.'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['token'] = 'tkn_numero'
+                            tok['descripcion'] = 'numero'
+                            lest = 7
                         elif linea['contenido'][x] in (';'):
                             tokensTotales.append(tok)
+                            tok = {'lexema': ';', 'token': 'tkn_punto_coma', 'descripcion': 'punto y coma',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            lest = 0
+                            e = 0
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif lest == 8:
+                        if linea['contenido'][x] in (';'):
                             tok = {'lexema': ';', 'token': 'tkn_punto_coma', 'descripcion': 'punto y coma', 'linea': linea['linea'],
                             'columna': x + 1}
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             lest = 0
                             e = 0
+                        elif linea['contenido'][x] in (' '):
+                            lest = 8
                         else:
                             error = {'linea': linea['linea'], 'columna': x+1}
                             errores.append(error)
@@ -361,6 +413,18 @@ class JsAfd:
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             e = 11
                             vest = 0
+                        elif linea['contenido'][x].isalpha():
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            vest = 8
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('-','+'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            tok['token'] = 'tkn_numero'
+                            tok['descripcion'] = 'numero'
+                            vest = 8
                         elif linea['contenido'][x] in (' '):
                             print(linea['contenido'][x])
                             vest = 5
@@ -396,6 +460,31 @@ class JsAfd:
                             e = 0
                         elif linea['contenido'][x] in (' '):
                             vest = 7
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif vest == 8:
+                        if linea['contenido'][x].isalpha():
+                            tok['token'] = 'tkn_boolean'
+                            tok['descripcion'] = 'palabra reservada booleana'
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            vest = 8
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('.'):
+                            tok['token'] = 'tkn_numero'
+                            tok['descripcion'] = 'asignacion de numero'
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            vest = 8
+                        elif linea['contenido'][x] in (' '):
+                            vest = 8
+                        elif linea['contenido'][x] in (';'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': ';', 'token': 'tkn_punto_coma', 'descripcion': 'punto y coma',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            vest = 0
+                            e = 0
                         else:
                             error = {'linea': linea['linea'], 'columna': x+1}
                             errores.append(error)
@@ -484,7 +573,7 @@ class JsAfd:
                     elif cest == 7:
                         if linea['contenido'][x] in (' '):
                             cest = 7
-                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('-'):
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('-','+','.'):
                             print(linea['contenido'][x])
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             tok['token'] = 'tkn_numero'
@@ -492,6 +581,19 @@ class JsAfd:
                             tok['linea'] = linea['linea']
                             tok['columna'] = x + 1
                             cest = 7
+                        elif linea['contenido'][x].isalpha():
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['token'] = 'tkn_bool'
+                            tok['descripcion'] = 'boleano'
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            cest = 8
+                        elif linea['contenido'][x] in ('\"'):
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            cest = 9
                         elif linea['contenido'][x] in ('('):
                             tok = {'lexema': '(', 'token': 'tkn_parentesis_abierto', 'descripcion': 'parentesis abierto',
                             'linea': linea['linea'], 'columna': x + 1}
@@ -508,6 +610,57 @@ class JsAfd:
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             cest = 0
                             e = 0
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif cest == 8:
+                        if linea['contenido'][x].isalpha():
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            cest = 8
+                        elif linea['contenido'][x] in (' '):
+                            cest = 8
+                        elif linea['contenido'][x] in (';'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': ';', 'token': 'tkn_punto_coma', 'descripcion': 'punto y coma',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            cest = 0
+                            e = 0
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif cest == 9:
+                        if not linea['contenido'][x] in ('\"'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['token'] = 'tkn_cadena_texto'
+                            tok['descripcion'] = 'cadena de texto'
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            cest = 9
+                        elif linea['contenido'][x] in ('\"'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            cest = 10
+                    elif cest == 10:
+                        if linea['contenido'][x] in (';'):
+                            tok = {'lexema': ';', 'token': 'tkn_punto_coma', 'descripcion': 'punto y coma',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            cest = 0
+                            e = 0
+                        elif linea['contenido'][x] in (' '):
+                            cest = 10
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
                 elif e == 5:
                     if iest == 0:
                         if linea['contenido'][x] in ('f'):
@@ -527,6 +680,16 @@ class JsAfd:
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             iest = 2
+                        elif linea['contenido'][x] in ('('):
+                            print(linea['contenido'][x])
+                            tok['token'] = 'tkn_if'
+                            tok['descripcion'] = 'palabra reservada if'
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '(', 'token': 'tkn_parentesis_abierto', 'descripcion': 'parentesis abierto',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            iest = 3
                         else:
                             print(linea['contenido'][x])
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
@@ -564,12 +727,14 @@ class JsAfd:
                             tok['token'] = 'tkn_identificador'
                             tok['descripcion'] = 'identificador en un if'
                             iest = 4
+                        elif linea['contenido'][x] in (' '):
+                            iest = 3
                         else:
                             error = {'linea': linea['linea'], 'columna': x+1}
                             errores.append(error)
                             print('hubo un error')
                     elif iest == 4:
-                        if linea['contenido'][x].isalpha() or linea['contenido'][x] in ('_'):
+                        if linea['contenido'][x].isalpha() or linea['contenido'][x] in ('_') or linea['contenido'][x].isdigit():
                             print(linea['contenido'][x])
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                         elif linea['contenido'][x] in (')'):
@@ -601,7 +766,7 @@ class JsAfd:
                                 iest = 5
                             else:
                                 iest = 4
-                        elif linea['contenido'][x] in ('_'):
+                        elif linea['contenido'][x] in ('_') or linea['contenido'][x].isdigit():
                             print(linea['contenido'][x])
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             tok['token'] = 'tkn_identificador'
@@ -675,12 +840,21 @@ class JsAfd:
                     elif west == 4:
                         if linea['contenido'][x] in (' '):
                             print(linea['contenido'][x])
-                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             tok['token'] = 'tkn_while'
                             tok['descripcion'] = 'palabra reservada while'
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             west = 5
+                        elif linea['contenido'][x] in ('('):
+                            print(linea['contenido'][x])
+                            tok['token'] = 'tkn_while'
+                            tok['descripcion'] = 'palabra reservada while'
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '(', 'token': 'tkn_parentesis_abierto', 'descripcion': 'parentesis abierto',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            west = 6
                         else:
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             west = 0
@@ -1018,12 +1192,20 @@ class JsAfd:
                             e = 10
                     elif sest == 5:
                         if linea['contenido'][x] in (' '):
-                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             tok['token'] = 'tkn_switch'
                             tok['descripcion'] = 'palabra reservada switch'
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             sest = 6
+                        elif linea['contenido'][x] in ('('):
+                            tok['token'] = 'tkn_switch'
+                            tok['descripcion'] = 'palabra reservada switch'
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '(', 'token': 'tkn_parentesis_abierto', 'descripcion': 'parentesis abiertos',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            sest = 7
                         else:
                             tok['lexema'] = tok['lexema'] + linea['contenido'][x]
                             sest = 0
@@ -1170,6 +1352,13 @@ class JsAfd:
                             tok['token'] = 'tkn_identificador'
                             tok['descripcion'] = 'identificador en parametro en llamada de funcion'
                             yest = 2
+                        elif linea['contenido'][x].isdigit() or linea['contenido'][x] in ('-','+'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            tok['token'] = 'tkn_numero'
+                            tok['descripcion'] = 'numero en llamada de funcion'
+                            yest = 6
                         elif linea['contenido'][x] in ('\"'):
                             tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles en llamada funcion',
                             'linea': linea['linea'], 'columna': x + 1}
@@ -1199,6 +1388,8 @@ class JsAfd:
                             tokensTotales.append(tok)
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             yest = 1
+                        elif linea['contenido'][x] in (' '):
+                            yest = 2
                         elif linea['contenido'][x] in (')'):
                             tokensTotales.append(tok)
                             tok = {'lexema': ')', 'token': 'tkn_parentesis_cerrado', 'descripcion': 'parentesis cerrado',
@@ -1252,6 +1443,30 @@ class JsAfd:
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             yest = 0
                             e = 0
+                        else:
+                            error = {'linea': linea['linea'], 'columna': x+1}
+                            errores.append(error)
+                            print('hubo un error')
+                    elif yest == 6:
+                        if linea['contenido'][x].isdigit() or linea['contenido'][x] in ('.'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            yest = 6
+                        elif linea['contenido'][x] in (' '):
+                            yest = 6
+                        elif linea['contenido'][x] in (','):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': ',', 'token': 'tkn_coma', 'descripcion': 'coma entre parametros',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            yest = 1
+                        elif linea['contenido'][x] in (')'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': ')', 'token': 'tkn_parentesis_cerrado', 'descripcion': 'parentesis cerrado',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            yest = 5
                         else:
                             error = {'linea': linea['linea'], 'columna': x+1}
                             errores.append(error)
@@ -1384,6 +1599,17 @@ class JsAfd:
                             tok['token'] = 'tkn_case_numero'
                             tok['descripcion'] = 'numero de case'
                             scest = 3
+                        elif linea['contenido'][x].isalpha():
+                            scest = 4
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                        elif linea['contenido'][x] in ('\"'):
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            scest = 5
                         elif linea['contenido'][x] in (' '):
                             scest = 3
                         elif linea['contenido'][x] in (':'):
@@ -1394,6 +1620,46 @@ class JsAfd:
                             tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
                             scest = 0
                             e = 0
+                    elif scest == 4:
+                        if linea['contenido'][x].isalpha():
+                            scest = 4
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                        elif linea['contenido'][x] in (' '):
+                            scest = 4
+                        elif linea['contenido'][x] in (':'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': ':', 'token': 'tkn_dos_puntos', 'descripcion': 'dos puntos para case',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            scest = 0
+                            e = 0
+                    elif scest == 5:
+                        if not linea['contenido'][x] in ('\"'):
+                            tok['lexema'] = tok['lexema'] + linea['contenido'][x]
+                            tok['linea'] = linea['linea']
+                            tok['columna'] = x + 1
+                            tok['token'] = 'tkn_cadena_texto'
+                            tok['descripcion'] = 'cadena de texto'
+                            scest = 5
+                        elif linea['contenido'][x] in ('\"'):
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '\"', 'token': 'tkn_comillas_dobles', 'descripcion': 'comillas dobles',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            scest = 6
+                    elif scest == 6:
+                        if linea['contenido'][x] in (':'):
+                            tok = {'lexema': ':', 'token': 'tkn_dos_puntos', 'descripcion': 'dos puntos para case',
+                            'linea': linea['linea'], 'columna': x + 1}
+                            tokensTotales.append(tok)
+                            tok = {'lexema': '', 'token': '', 'descripcion': '', 'linea': '', 'columna': ''}
+                            scest = 0
+                            e = 0
+
                 elif e == 13:
                     if sbest == 0:
                         if linea['contenido'][x] in ('r'):
@@ -1444,7 +1710,7 @@ class JsAfd:
                             e = 10
 
                 
-        print(tokensTotales)
-        print(errores)
+        #print(tokensTotales)
+        #print(errores)
         self.tokens = tokensTotales
         self.errores = errores   

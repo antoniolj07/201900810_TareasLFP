@@ -20,207 +20,2972 @@
         </thead>
         <tbody>
           <tr>
-            <td>if</td>
-            <td>tkn_if</td>
-            <td>palabra reservada if</td>
+            <td>/*</td>
+            <td>tkn_diagonal_asterisco</td>
+            <td>inicio de comentario</td>
             <td>1</td>
             <td>1</td>
           </tr>
           <tr>
-            <td>(</td>
-            <td>tkn_parentesis_abierto</td>
-            <td>parentesis abierto</td>
+            <td>Entrada 2</td>
+            <td>tkn_contenido_comentario</td>
+            <td>cuerpo del comentario</td>
             <td>1</td>
-            <td>4</td>
+            <td>11</td>
           </tr>
           <tr>
-            <td>esNum</td>
-            <td>tkn_identificador</td>
-            <td>identificador en un if</td>
+            <td>*/</td>
+            <td>tkn_asterisco_diagonal</td>
+            <td>cierre de comentario</td>
             <td>1</td>
-            <td>5</td>
+            <td>13</td>
           </tr>
           <tr>
-            <td>)</td>
-            <td>tkn_parentesis_cerrado</td>
-            <td>parentesis cerrado</td>
-            <td>1</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>{</td>
-            <td>tkn_llave_abierta</td>
-            <td>llave abierta</td>
-            <td>1</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>var</td>
-            <td>tkn_var</td>
-            <td>palabra reservada var</td>
+            <td>/*</td>
+            <td>tkn_diagonal_asterisco</td>
+            <td>inicio de comentario</td>
             <td>2</td>
-            <td>5</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>num</td>
+            <td>Puede ser multilinea el comentario</td>
+            <td>tkn_contenido_comentario</td>
+            <td>cuerpo del comentario</td>
+            <td>3</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>*/</td>
+            <td>tkn_asterisco_diagonal</td>
+            <td>cierre de comentario</td>
+            <td>3</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>4</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>_identificador1</td>
             <td>tkn_identificador</td>
             <td>nombre del identificador</td>
-            <td>2</td>
-            <td>9</td>
+            <td>4</td>
+            <td>7</td>
           </tr>
           <tr>
             <td>=</td>
             <td>tkn_signo_igual</td>
             <td>signo igual</td>
-            <td>2</td>
-            <td>13</td>
+            <td>4</td>
+            <td>23</td>
           </tr>
           <tr>
-            <td>&quot;</td>
-            <td>tkn_comillas_dobles</td>
-            <td>comillas dobles abiertas</td>
-            <td>2</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>fuck</td>
-            <td>tkn_cadena_texto</td>
-            <td>cadena de texto</td>
-            <td>2</td>
-            <td>19</td>
-          </tr>
-          <tr>
-            <td>&quot;</td>
-            <td>tkn_comillas_dobles</td>
-            <td>comillas dobles cerradas</td>
-            <td>2</td>
-            <td>20</td>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>4</td>
+            <td>25</td>
           </tr>
           <tr>
             <td>;</td>
             <td>tkn_punto_coma</td>
             <td>punto y coma</td>
-            <td>2</td>
-            <td>21</td>
+            <td>4</td>
+            <td>29</td>
           </tr>
           <tr>
-            <td>}</td>
-            <td>tkn_llave_cerrada</td>
-            <td>llave cerrada</td>
-            <td>3</td>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>5</td>
             <td>1</td>
+          </tr>
+          <tr>
+            <td>identificador2</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>5</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>5</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles abiertas</td>
+            <td>5</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Ejemplo cadena</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>5</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles cerradas</td>
+            <td>5</td>
+            <td>37</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>5</td>
+            <td>38</td>
           </tr>
           <tr>
             <td>let</td>
             <td>tkn_let</td>
             <td>palabra reservada let</td>
-            <td>4</td>
+            <td>6</td>
             <td>1</td>
           </tr>
           <tr>
-            <td>funficiton</td>
+            <td>identificador_3</td>
             <td>tkn_identificador</td>
             <td>nombre del identificador</td>
-            <td>4</td>
+            <td>6</td>
             <td>5</td>
           </tr>
           <tr>
             <td>=</td>
             <td>tkn_igual</td>
             <td>signo igual</td>
+            <td>6</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>-32</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>6</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>6</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>7</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>_three_3_33</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>7</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>7</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>7</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>7</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>8</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>_four_4_44</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>8</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>8</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>3.53232</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>8</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>8</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>9</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>9</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>9</td>
             <td>4</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>9</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>9</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>/*</td>
+            <td>tkn_diagonal_asterisco</td>
+            <td>inicio de comentario</td>
+            <td>10</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Contenido del if</td>
+            <td>tkn_contenido_comentario</td>
+            <td>cuerpo del comentario</td>
+            <td>10</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>*/</td>
+            <td>tkn_asterisco_diagonal</td>
+            <td>cierre de comentario</td>
+            <td>10</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>print</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>11</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>11</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>11</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>11</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>foreach</td>
+            <td>tkn_foreach</td>
+            <td>palabra reservada foreach</td>
+            <td>12</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>12</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>cad</td>
+            <td>tkn_elemento_identificador</td>
+            <td>elemendo de un arreglo en un foreach</td>
+            <td>12</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td>tkn_in</td>
+            <td>palabra reservada in</td>
+            <td>12</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>elementos</td>
+            <td>tkn_identificador</td>
+            <td>coleccion de elementos para foreach</td>
+            <td>12</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>12</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>12</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>13</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>_variable1</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>13</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>13</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>13</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>13</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>14</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>15</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>16</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>16</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>16</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>16</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>16</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>17</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>variable</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>17</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>17</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>17</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>18</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>19</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>19</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>false</td>
+            <td>tkn_false</td>
+            <td>palabra reservada false</td>
+            <td>19</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>19</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>19</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>while</td>
+            <td>tkn_while</td>
+            <td>palabra reservada while</td>
+            <td>20</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>20</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un while</td>
+            <td>20</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>20</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>20</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>/*</td>
+            <td>tkn_diagonal_asterisco</td>
+            <td>inicio de comentario</td>
+            <td>21</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Contenido del while</td>
+            <td>tkn_contenido_comentario</td>
+            <td>cuerpo del comentario</td>
+            <td>21</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>*/</td>
+            <td>tkn_asterisco_diagonal</td>
+            <td>cierre de comentario</td>
+            <td>21</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>print</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>22</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>22</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>22</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>hola mundo</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>22</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>22</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>22</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>22</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>23</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>24</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>while</td>
+            <td>tkn_while</td>
+            <td>palabra reservada while</td>
+            <td>25</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>25</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>identidicador</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un while</td>
+            <td>25</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>25</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>25</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>26</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>26</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>26</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>26</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>26</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>27</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_var_1</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>27</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>27</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>27</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>27</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>28</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>29</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>while</td>
+            <td>tkn_while</td>
+            <td>palabra reservada while</td>
+            <td>30</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>30</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>30</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>30</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>30</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>31</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>funcion</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>31</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>31</td>
             <td>16</td>
           </tr>
           <tr>
             <td>(</td>
             <td>tkn_parentesis_abierto</td>
             <td>parentesis abierto</td>
-            <td>4</td>
+            <td>31</td>
             <td>18</td>
           </tr>
           <tr>
-            <td>param</td>
+            <td>p1</td>
             <td>tkn_identificador</td>
             <td>identificador como parametro de funcion</td>
-            <td>4</td>
+            <td>31</td>
             <td>19</td>
           </tr>
           <tr>
             <td>,</td>
             <td>tkn_coma</td>
             <td>coma entre parametros de una funcion</td>
-            <td>4</td>
-            <td>24</td>
+            <td>31</td>
+            <td>21</td>
           </tr>
           <tr>
-            <td>param2</td>
+            <td>p2</td>
             <td>tkn_identificador</td>
             <td>identificador como parametro de funcion</td>
-            <td>4</td>
-            <td>26</td>
+            <td>31</td>
+            <td>23</td>
           </tr>
           <tr>
             <td>)</td>
             <td>tkn_parentesis_cerrado</td>
             <td>parentesis cerrado en una funcion</td>
-            <td>4</td>
-            <td>32</td>
+            <td>31</td>
+            <td>25</td>
           </tr>
           <tr>
             <td>=&gt;</td>
             <td>tkn_flecha</td>
             <td>singo de funcion de flecha</td>
-            <td>4</td>
-            <td>34</td>
+            <td>31</td>
+            <td>27</td>
           </tr>
           <tr>
             <td>{</td>
             <td>tkn_llave_abierta</td>
             <td>llave abierta de funcion</td>
-            <td>4</td>
-            <td>37</td>
+            <td>31</td>
+            <td>30</td>
           </tr>
           <tr>
-            <td>llamadita</td>
-            <td>tkn_identificador_funcion</td>
-            <td>llamada a funcion</td>
-            <td>5</td>
-            <td>5</td>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>32</td>
+            <td>6</td>
           </tr>
           <tr>
             <td>(</td>
             <td>tkn_parentesis_abierto</td>
             <td>parentesis abierto</td>
-            <td>5</td>
-            <td>14</td>
+            <td>32</td>
+            <td>8</td>
           </tr>
           <tr>
-            <td>false</td>
-            <td>tkn_false</td>
-            <td>palabra reservada false</td>
-            <td>5</td>
-            <td>15</td>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>32</td>
+            <td>9</td>
           </tr>
           <tr>
             <td>)</td>
             <td>tkn_parentesis_cerrado</td>
             <td>parentesis cerrado</td>
-            <td>5</td>
-            <td>20</td>
+            <td>32</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>32</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>33</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>_var</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>33</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>33</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>33</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>cadena</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>33</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>33</td>
+            <td>28</td>
           </tr>
           <tr>
             <td>;</td>
             <td>tkn_punto_coma</td>
             <td>punto y coma</td>
-            <td>5</td>
-            <td>21</td>
+            <td>33</td>
+            <td>29</td>
           </tr>
           <tr>
             <td>}</td>
             <td>tkn_llave_cerrada</td>
             <td>llave cerrada</td>
+            <td>34</td>
             <td>6</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>35</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>36</td>
             <td>1</td>
+          </tr>
+          <tr>
+            <td>foreach</td>
+            <td>tkn_foreach</td>
+            <td>palabra reservada foreach</td>
+            <td>37</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>37</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>elemento</td>
+            <td>tkn_elemento_identificador</td>
+            <td>elemendo de un arreglo en un foreach</td>
+            <td>37</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td>tkn_in</td>
+            <td>palabra reservada in</td>
+            <td>37</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>coleccion</td>
+            <td>tkn_identificador</td>
+            <td>coleccion de elementos para foreach</td>
+            <td>37</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>37</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>37</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>38</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>38</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>38</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>38</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>38</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>while</td>
+            <td>tkn_while</td>
+            <td>palabra reservada while</td>
+            <td>39</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>39</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>39</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>39</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>39</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>40</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>aceptado</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>40</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>40</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>40</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>40</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>41</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>42</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>43</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>switch</td>
+            <td>tkn_switch</td>
+            <td>palabra reservada switch</td>
+            <td>44</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abiertos</td>
+            <td>44</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>identidicador</td>
+            <td>tkn_identificador</td>
+            <td>identificador del switch</td>
+            <td>44</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>44</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>44</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>45</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tkn_case_numero</td>
+            <td>numero de case</td>
+            <td>45</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>45</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>46</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>vasSwitch</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>46</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>46</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>46</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>46</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>break</td>
+            <td>tkn_break</td>
+            <td>palabra reservada break</td>
+            <td>47</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>47</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>48</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>48</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>48</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>49</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>vasSwitch2</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>49</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>49</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>49</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>Hola sw!</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>49</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>49</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>49</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>break</td>
+            <td>tkn_break</td>
+            <td>palabra reservada break</td>
+            <td>50</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>50</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>51</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>51</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>PruebaCaseCadena</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>51</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>51</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>51</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>52</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_idSW</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>52</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>52</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>52</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>52</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>53</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>53</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>identidicador</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>53</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>53</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>53</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>54</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>variable2</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>54</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>54</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>54</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>54</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>55</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>56</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>tkn_case_numero</td>
+            <td>numero de case</td>
+            <td>56</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>56</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>57</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>57</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>57</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>57</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>57</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>58</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>_aceptado</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>58</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>58</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>58</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>58</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>59</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>default</td>
+            <td>tkn_default</td>
+            <td>palabra reservada default</td>
+            <td>60</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para default</td>
+            <td>60</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>61</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>def1</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>61</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>61</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles abiertas</td>
+            <td>61</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>Hola def</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>61</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles cerradas</td>
+            <td>61</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>61</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>break</td>
+            <td>tkn_break</td>
+            <td>palabra reservada break</td>
+            <td>62</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>62</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>63</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>switch</td>
+            <td>tkn_switch</td>
+            <td>palabra reservada switch</td>
+            <td>64</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abiertos</td>
+            <td>64</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador del switch</td>
+            <td>64</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>64</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>64</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>65</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tkn_case_numero</td>
+            <td>numero de case</td>
+            <td>65</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>65</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>66</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_identificador_sw</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>66</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>66</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>66</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>66</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>break</td>
+            <td>tkn_break</td>
+            <td>palabra reservada break</td>
+            <td>67</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>67</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>case </td>
+            <td>tkn_case</td>
+            <td>palabra reservada case</td>
+            <td>68</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>tkn_case_numero</td>
+            <td>numero de case</td>
+            <td>68</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>:</td>
+            <td>tkn_dos_puntos</td>
+            <td>dos puntos para case</td>
+            <td>68</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>69</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_caso</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>69</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>69</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles abiertas</td>
+            <td>69</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Sin break</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>69</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles cerradas</td>
+            <td>69</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>69</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>70</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>const</td>
+            <td>tkn_const</td>
+            <td>palabra reservada const</td>
+            <td>71</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>funcion1</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>71</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>71</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>71</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>parametro1</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>71</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado en una funcion</td>
+            <td>71</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>=&gt;</td>
+            <td>tkn_flecha</td>
+            <td>singo de funcion de flecha</td>
+            <td>71</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta de funcion</td>
+            <td>71</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>72</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>72</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>72</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>72</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>72</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>73</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_nombre</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>73</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>73</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>73</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>primeraParte</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>73</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>73</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>73</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>74</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>75</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>76</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>funcion2</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>76</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>76</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>76</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>parametro1</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>76</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros de una funcion</td>
+            <td>76</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>parametro2</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>76</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado en una funcion</td>
+            <td>76</td>
+            <td>39</td>
+          </tr>
+          <tr>
+            <td>=&gt;</td>
+            <td>tkn_flecha</td>
+            <td>singo de funcion de flecha</td>
+            <td>76</td>
+            <td>41</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta de funcion</td>
+            <td>76</td>
+            <td>44</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>77</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>77</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>77</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>77</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>77</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>78</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_nombre</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>78</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>78</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>78</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>SegundaParte</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>78</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>78</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>78</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>79</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>80</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>81</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>funcion3</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>81</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>81</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>81</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>parametro1</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>81</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros de una funcion</td>
+            <td>81</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>parametro2</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>81</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros de una funcion</td>
+            <td>81</td>
+            <td>39</td>
+          </tr>
+          <tr>
+            <td>parametro3</td>
+            <td>tkn_identificador</td>
+            <td>identificador como parametro de funcion</td>
+            <td>81</td>
+            <td>41</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado en una funcion</td>
+            <td>81</td>
+            <td>51</td>
+          </tr>
+          <tr>
+            <td>=&gt;</td>
+            <td>tkn_flecha</td>
+            <td>singo de funcion de flecha</td>
+            <td>81</td>
+            <td>53</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta de funcion</td>
+            <td>81</td>
+            <td>56</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>82</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>82</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>82</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>82</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>82</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>83</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_apellido</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>83</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>83</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>83</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>TerceraParte</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>83</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>83</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>83</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>84</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>85</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>var</td>
+            <td>tkn_var</td>
+            <td>palabra reservada var</td>
+            <td>86</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>funcion4</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>86</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_signo_igual</td>
+            <td>signo igual</td>
+            <td>86</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>86</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>86</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>=&gt;</td>
+            <td>tkn_flecha</td>
+            <td>singo de funcion de flecha</td>
+            <td>86</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta de funcion</td>
+            <td>86</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>if</td>
+            <td>tkn_if</td>
+            <td>palabra reservada if</td>
+            <td>87</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>87</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>tkn_identificador</td>
+            <td>identificador en un if</td>
+            <td>87</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>87</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>{</td>
+            <td>tkn_llave_abierta</td>
+            <td>llave abierta</td>
+            <td>87</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>88</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>_apellido</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>88</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>88</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>88</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>CuartaParte</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto</td>
+            <td>88</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>88</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>88</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>89</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>}</td>
+            <td>tkn_llave_cerrada</td>
+            <td>llave cerrada</td>
+            <td>90</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>funcion1</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>91</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>91</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>tkn_true</td>
+            <td>palabra reservada true</td>
+            <td>91</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>91</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>tkn_numero</td>
+            <td>numero en llamada de funcion</td>
+            <td>91</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>91</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>91</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Primera</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>91</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>91</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>91</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>91</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>funcion2</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>92</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>92</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>false</td>
+            <td>tkn_false</td>
+            <td>palabra reservada false</td>
+            <td>92</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>92</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>tkn_numero</td>
+            <td>numero en llamada de funcion</td>
+            <td>92</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>92</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>92</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>segunda</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>92</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>92</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>92</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>92</td>
+            <td>31</td>
+          </tr>
+          <tr>
+            <td>funcion3</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>93</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>93</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>93</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Primera</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>93</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>93</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>93</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>93</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>Segunda</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>93</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>93</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>93</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>93</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>Tercera</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>93</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>93</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>93</td>
+            <td>41</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles en llamada funcion</td>
+            <td>93</td>
+            <td>43</td>
+          </tr>
+          <tr>
+            <td>Cuarta</td>
+            <td>tkn_cadena_texto</td>
+            <td>cadena de texto como parametro de funcion</td>
+            <td>93</td>
+            <td>43</td>
+          </tr>
+          <tr>
+            <td>&quot;</td>
+            <td>tkn_comillas_dobles</td>
+            <td>comillas dobles</td>
+            <td>93</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>93</td>
+            <td>51</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>93</td>
+            <td>52</td>
+          </tr>
+          <tr>
+            <td>funcion4</td>
+            <td>tkn_identificador_funcion</td>
+            <td>llamada a funcion</td>
+            <td>94</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>(</td>
+            <td>tkn_parentesis_abierto</td>
+            <td>parentesis abierto</td>
+            <td>94</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>tkn_numero</td>
+            <td>numero en llamada de funcion</td>
+            <td>94</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>94</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>-3</td>
+            <td>tkn_numero</td>
+            <td>numero en llamada de funcion</td>
+            <td>94</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>94</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>+21</td>
+            <td>tkn_numero</td>
+            <td>numero en llamada de funcion</td>
+            <td>94</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>,</td>
+            <td>tkn_coma</td>
+            <td>coma entre parametros</td>
+            <td>94</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>false</td>
+            <td>tkn_false</td>
+            <td>palabra reservada false</td>
+            <td>94</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>)</td>
+            <td>tkn_parentesis_cerrado</td>
+            <td>parentesis cerrado</td>
+            <td>94</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>94</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>96</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>prueba</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>96</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>96</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>96</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>96</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>97</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>prueba2</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>97</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>97</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>13.2</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>97</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>97</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>let</td>
+            <td>tkn_let</td>
+            <td>palabra reservada let</td>
+            <td>98</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>prueba3</td>
+            <td>tkn_identificador</td>
+            <td>nombre del identificador</td>
+            <td>98</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>tkn_igual</td>
+            <td>signo igual</td>
+            <td>98</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>12.5</td>
+            <td>tkn_numero</td>
+            <td>numero</td>
+            <td>98</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>;</td>
+            <td>tkn_punto_coma</td>
+            <td>punto y coma</td>
+            <td>98</td>
+            <td>19</td>
           </tr>
         </tbody>
       </table>
